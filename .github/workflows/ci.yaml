@@ -3,6 +3,8 @@ name: CI Frontend
 on:
   push:
   pull_request:
+    paths:
+      - client/**
     branches:
       - main
 
@@ -11,8 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Change to client folder
-      run: cd client
     - name: Install modules
       run: yarn
     - name: Check formatting with Prettier
