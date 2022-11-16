@@ -1,3 +1,3 @@
 export default function Menu():JSX.Element{
-    return <h1>menu</h1>
+    return <h1>Who's That</h1>
 }
