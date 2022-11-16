@@ -2,28 +2,27 @@ name: CI Frontend
 
 on:
   push:
-    paths:
-      - client/**
   pull_request:
-    paths:
-      - client/**
     branches:
       - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./client
     steps:
     - uses: actions/checkout@v2
     - name: Install modules
       run: yarn
     - name: Check formatting with Prettier
-      run: yarn format:check client
+      run: yarn format:check
     - name: Check quality with ESLint
-      run: yarn lint client
+      run: yarn lint
     - name: Check types compile
-      run: yarn type-check client
+      run: yarn type-check
     - name: Check tests pass
-      run: yarn test client
+      run: yarn test
     - name: Check app builds
-      run: yarn build client
+      run: yarn build
