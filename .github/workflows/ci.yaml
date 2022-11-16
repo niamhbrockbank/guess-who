@@ -18,12 +18,12 @@ jobs:
     - name: Install modules
       run: yarn
     - name: Check formatting with Prettier
-      run: yarn format:check
+      run: yarn format:check client
     - name: Check quality with ESLint
-      run: yarn lint
+      run: yarn lint client
     - name: Check types compile
-      run: yarn type-check
+      run: yarn type-check client
     - name: Check tests pass
-      run: yarn test
+      run: yarn test client
     - name: Check app builds
-      run: yarn build
+      run: yarn build client

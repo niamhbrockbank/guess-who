@@ -8,15 +8,15 @@ import Setup from "./components/Setup";
 function App(): JSX.Element {
   return (
     <>
-    <Menu />
-    <Routes>
-      <Route path='/' element={<Login />} />
-      <Route path='/setup' element={<Setup />} />
-      <Route path='/game' element={<Game />} />
-    </Routes>
-    <Footer />
+      <Menu />
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/setup" element={<Setup />} />
+        <Route path="/game" element={<Game />} />
+      </Routes>
+      <Footer />
     </>
-  )
+  );
 }
 
 export default App;
